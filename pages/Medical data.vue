@@ -3,7 +3,7 @@
     <body>
         <h1>Medical History Form</h1>
 
-        <section class="section1">
+        <div class="section1">
             <h2>Member's Details</h2>
             <label for="full-name">Full Name</label>
             <input id="full-name" type="text" placeholder="Full name" required />
@@ -16,9 +16,8 @@
 
             <label for="email">Email</label>
             <input id="email" type="email" placeholder="Email" required />
-        </section>
-
-        <section class="section2">
+        </div>
+        <div class="section2">
             <h2>Doctor's Details</h2>
             <label for="doctor-name">Full Name</label>
             <input id="doctor-name" type="text" placeholder="Full name" required />
@@ -31,9 +30,9 @@
 
             <label for="address">Address</label>
             <input id="address" type="text" placeholder="Address" required />
-        </section>
+        </div>
 
-        <section class="section3">
+        <div class="section3">
             <h2>Medical History</h2>
             <label>Have you had any of the following?</label>
             <div class="diseases">
@@ -134,7 +133,7 @@
                 your information remains safe and is used solely to enhance your
                 healthcare experience.
             </p>
-        </section>
+        </div>
 
         <button type="submit">Submit Form</button>
     </body>
