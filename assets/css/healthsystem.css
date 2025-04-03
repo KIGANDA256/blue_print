@@ -1,0 +1,94 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url(doctor.jpg);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 20px;
+  background-position:center;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+section {
+  background:rgba(127, 255, 212, 0.281);
+  padding: 20px;
+  margin: 20px auto;
+  width: 45%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+input[type="email"] {
+  width: 80%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  /* border: none; */
+  border-radius: 5px;
+}
+
+.gender {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.gender label {
+  font-weight: normal;
+}
+
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+button{
+  padding: 20px;
+  margin: 20px;
+  width: 20%;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-left: 40%;
+  border: none;
+  background-color: rgba(108, 239, 191, 0.815);
+}
+button:hover{
+  opacity: 0.8s;
+  background-color: rgb(47, 70, 70);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  section {
+      width: 95%;
+  }
+
+  .gender {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      padding: 10px;
+  }
+
+  section {
+      width: 100%;
+      padding: 15px;
+  }
+}
