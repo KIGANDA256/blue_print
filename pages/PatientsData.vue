@@ -1,10 +1,8 @@
 <template>
-
-    <body>
+    <div class="body">
         <h1>Patient Information Form</h1>
 
-
-
+    <form @submit.prevent="submit">
         <section class="section1">
             <h2>Bio-Data</h2>
             <label for="first-name">First Name</label>
@@ -55,7 +53,24 @@
 
             <label for="email">Email</label>
             <input id="email" type="email" placeholder="Email" required>
+            
         </section>
-        <button>SUBMIT FORM</button>
-    </body>
+        <button type="submit">SUBMIT FORM</button>
+    </form>
+
+    </div>
+    
+
+
 </template>
+<style src="../assets/css/healthsystem.css" scoped></style>
+<!--  -->
+
+<!-- 
+ 
+-->
+<script setup>
+function submit() {
+    console.log("submitted..👍🟢🟢")
+}
+</script>
