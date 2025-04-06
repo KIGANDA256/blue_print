@@ -1,9 +1,7 @@
-// import { Prisma } from "~/generated/prisma"
-// const { PrismaClient } = require('@prisma/client')
-// const prisma= new PrismaClient()
-import { PrismaClient } from '~/generated/prisma'
-//
 
+
+
+import { PrismaClient } from '~/generated/prisma'
 const prisma = new PrismaClient()
 
 export default defineEventHandler(async (event) => {

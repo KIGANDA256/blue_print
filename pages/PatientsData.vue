@@ -71,6 +71,7 @@
 
 
 <script setup>
+//data capture from the front end
 const firstname = ref('')
 const lastname = ref('')
 const gender = ref('')
@@ -86,18 +87,22 @@ const contact = ref('')
 const NOK_contact = ref('')
 const email = ref('')
 
+//submission 
 async function submit() {
 
-    await $fetch('/api/patients',
-        {
+    try {
+        const response = await fetch('/api/patients', {
             method: 'POST',
-            body: {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
                 firstname: firstname.value,
                 lastname: lastname.value,
                 gender: gender.value,
                 age: age.value,
-                D_O_B: new Date(D_O_B.value).toISOString(),
-                country: country.value,
+                D_O_B:
+                    country: country.value,
                 county: county.value,
                 district: district.value,
                 city: city.value,
@@ -106,11 +111,15 @@ async function submit() {
                 contact: contact.value,
                 NOK_contact: NOK_contact.value,
                 email: email.value
-            }
-
+            })
+        })
+        if (!response.ok) {
+            throw new Error('Failed to submit form')
         }
-    )
-
+        console.log('Form submitted successfully')
+    } catch (err) {
+        console.error(err)
+    }
 }
 
 
@@ -123,38 +132,7 @@ async function submit() {
 <!-- test code  -->
 <!-- 
 // async function submit() {
-//     try {
-//         const response = await fetch('/api/patients', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({
-//                 firstname: firstname.value,
-//                 lastname: lastname.value,
-//                 gender: gender.value,
-//                 age: age.value,
-//                 D_O_B:
-//                 country: country.value,
-//                 county: county.value,
-//                 district: district.value,
-//                 city: city.value,
-//                 sub_county: sub_county.value,
-//                 village: village.value,
-//                 contact: contact.value,
-//                 NOK_contact: NOK_contact.value,
-//                 email: email.value
-//             })
-//         })
-
-//         if (!response.ok) {
-//             throw new Error('Failed to submit form')
-//         }
-
-//         console.log('Form submitted successfully')
-//     } catch (err) {
-//         console.error(err)
-//     }
+//   
 // }
 -->
 
