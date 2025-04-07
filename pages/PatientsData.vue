@@ -101,8 +101,8 @@ async function submit() {
                 lastname: lastname.value,
                 gender: gender.value,
                 age: age.value,
-                D_O_B:
-                    country: country.value,
+                D_O_B:new Date(D_O_B.value).toISOString(),
+                country: country.value,
                 county: county.value,
                 district: district.value,
                 city: city.value,
