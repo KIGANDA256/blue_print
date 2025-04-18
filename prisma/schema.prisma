@@ -15,21 +15,32 @@ datasource db {
 }
 
 model patients {
-  id         Int       @id @default(autoincrement())
-  firstname  String
-  lastname   String
+  id            Int      @id @default(autoincrement())
+  firstname     String
+  lastname      String
   date_of_Birth DateTime
-  gender     String
-  age        Int
-  Country    String
-  District   String
-  City       String
-  County     String
-  Sub_County String
-  village    String
-  contact    String
-  NOK_contact String
-  email      String
-  createdAt DateTime @default(now())
+  gender        String
+  age           Int
+  Country       String
+  District      String
+  City          String
+  County        String
+  Sub_County    String
+  village       String
+  contact       String
+  NOK_contact   String
+  email         String
+  createdAt     DateTime @default(now())
+
   @@unique([id, email])
 }
+
+// model users {
+//   id              Int    @id @default(autoincrement())
+//   username        String
+//   email           String
+//   password        String
+//   confirmPassword String
+
+//   @@unique([id, email, password])
+// }

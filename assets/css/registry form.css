@@ -1,0 +1,84 @@
+.body {
+  font-family: Arial, sans-serif;
+  background-image: url(nrse.jpeg);
+  /* background: linear-gradient(-90deg, #0056b3,#84cf6a ); */
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.REGISTER {
+  background-color:rgba(255, 255, 255, 0.8);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.REGISTER h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:#0056b3;
+}
+
+.REGISTER input[type="text"],
+.REGISTER input[type="email"],
+.REGISTER input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.REGISTER input:focus {
+  outline: none;
+  border-color:rgba(0, 255, 255, 0.473);
+}
+
+.REGISTER button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background-color:#0056b3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  }
+
+.REGISTER button:hover {
+  background-color: rgba(0, 255, 255, 0.473);
+}
+
+.REGISTER p {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.REGISTER a {
+  color:#0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.REGISTER a:hover {
+ text-decoration: underline;
+ color:black;
+}
